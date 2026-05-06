@@ -1,0 +1,681 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background:#fff7f4;
+    color:#5a3525;
+    line-height:1.6;
+    text-align:center;
+}
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+header{
+    background:#f7d7d0;
+    padding:18px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 15px rgba(90,53,37,0.12);
+}
+
+.container-header{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+}
+
+.logo h1{
+    color:#5a3525;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+a{
+    text-decoration:none;
+    color:#5a3525;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+a:hover{
+    color:#e46f61;
+}
+
+.btn-login-header{
+    background:#f28f82;
+    color:white;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+.hero{
+    min-height:75vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#fde9e5,#fff7f4,#f7d7d0);
+}
+
+.hero-content{
+    background:rgba(255,255,255,0.82);
+    padding:45px;
+    border-radius:30px;
+    max-width:760px;
+    box-shadow:0 10px 30px rgba(90,53,37,0.12);
+}
+
+.hero h2{
+    font-size:44px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:28px;
+}
+
+button,
+.btn-primary{
+    padding:14px 30px;
+    background:#f28f82;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    font-family:'Times New Roman', Times, serif;
+}
+
+button:hover,
+.btn-primary:hover{
+    background:#e46f61;
+    transform:scale(1.04);
+}
+
+section{
+    padding:70px 20px;
+}
+
+section h2{
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.destaques,
+.sobre,
+.servicos{
+    background:#fff7f4;
+}
+
+.cardapio,
+.depoimentos,
+.contato{
+    background:#fde9e5;
+}
+
+.destaque-grid,
+.sobre-grid,
+.depoimentos-grid,
+.servicos-grid,
+.contato-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:35px;
+}
+
+.destaque-item,
+.sobre-item,
+.depoimento-card,
+.servico-item,
+.contato-info,
+.menu-categoria{
+    background:white;
+    padding:28px;
+    border-radius:24px;
+    box-shadow:0 6px 18px rgba(90,53,37,0.10);
+}
+
+.menu-categoria{
+    max-width:1000px;
+    margin:30px auto;
+    text-align:left;
+}
+
+.menu-categoria h3{
+    text-align:center;
+    color:#7a4631;
+    font-size:28px;
+    margin-bottom:25px;
+}
+
+.menu-lista{
+    list-style:none;
+}
+
+.produto-item{
+    display:grid;
+    grid-template-columns:150px 1fr 220px;
+    align-items:center;
+    gap:25px;
+    background:#fff;
+    padding:22px;
+    border-radius:24px;
+    margin-bottom:22px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.produto-item img{
+    width:140px;
+    height:140px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+.produto-info{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.produto-info strong{
+    font-size:23px;
+    color:#5a3525;
+}
+
+.produto-info p{
+    font-size:16px;
+    color:#7a4631;
+}
+
+.produto-lateral{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:14px;
+}
+
+.produto-lateral .preco{
+    font-size:22px;
+    font-weight:bold;
+    color:#e46f61;
+    white-space:nowrap;
+}
+
+.produto-lateral button{
+    width:180px;
+    position:relative;
+    overflow:hidden;
+}
+
+.produto-lateral button:hover{
+    transform:translateY(-3px) scale(1.04);
+    box-shadow:0 8px 20px rgba(242,143,130,0.35);
+}
+
+.produto-lateral button:active{
+    transform:scale(0.96);
+}
+
+.animar-botao{
+    animation:adicionado 0.5s ease;
+}
+
+@keyframes adicionado{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+.formulario-contato{
+    max-width:650px;
+    margin:45px auto 0;
+    background:white;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 6px 18px rgba(90,53,37,0.10);
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #f7d7d0;
+    border-radius:18px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:15px;
+    outline:none;
+}
+
+footer{
+    background:#5a3525;
+    color:white;
+    padding:30px 20px;
+}
+
+footer a{
+    color:white;
+    margin:0 10px;
+}
+
+.social-links{
+    margin-top:12px;
+}
+
+.modal-carrinho{
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:90%;
+    max-width:1000px;
+    max-height:85vh;
+    overflow:auto;
+    background:white;
+    border-radius:28px;
+    z-index:2000;
+    box-shadow:0 10px 40px rgba(0,0,0,0.25);
+}
+
+.overlay-carrinho{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:1500;
+}
+
+.carrinho-container{
+    padding:30px;
+}
+
+.carrinho-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #f7d7d0;
+    padding-bottom:15px;
+    margin-bottom:25px;
+}
+
+.btn-fechar{
+    background:#5a3525;
+    padding:8px 14px;
+    border-radius:50%;
+}
+
+.carrinho-content{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    text-align:left;
+}
+
+.carrinho-produtos,
+.carrinho-resumo{
+    background:#fff7f4;
+    padding:22px;
+    border-radius:22px;
+}
+
+.carrinho-vazio{
+    color:#7a4631;
+    margin:15px 0;
+}
+
+.carrinho-totais{
+    margin:20px 0;
+}
+
+.total-item{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px solid #f7d7d0;
+}
+
+.total-final{
+    font-size:20px;
+    font-weight:bold;
+    color:#e46f61;
+}
+
+.btn-confirmar{
+    width:100%;
+    margin-bottom:12px;
+}
+
+.btn-continuar{
+    width:100%;
+    background:#7a4631;
+}
+
+.item-carrinho{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    padding:15px;
+    border-radius:18px;
+    margin-bottom:12px;
+}
+
+.item-carrinho p{
+    margin-top:5px;
+    color:#e46f61;
+    font-weight:bold;
+}
+
+.btn-remover{
+    background:#e46f61;
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    padding:0;
+}
+
+.login-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#fde9e5,#fff7f4,#f7d7d0);
+    padding:20px;
+}
+
+.login-container{
+    background:white;
+    padding:45px;
+    border-radius:30px;
+    width:100%;
+    max-width:420px;
+    box-shadow:0 10px 30px rgba(90,53,37,0.12);
+}
+
+.login-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.cadastro-texto{
+    margin-top:20px;
+}
+
+.voltar-home{
+    display:inline-block;
+    margin-top:20px;
+    color:#e46f61;
+}
+
+@media(max-width:768px){
+    .container-header{
+        flex-direction:column;
+    }
+
+    nav ul{
+        gap:12px;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    .produto-item{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .produto-item img{
+        width:100%;
+        max-width:260px;
+        height:220px;
+        margin:auto;
+    }
+
+    .produto-lateral{
+        align-items:center;
+    }
+
+    .produto-lateral button{
+        width:100%;
+    }
+
+    .carrinho-content{
+        grid-template-columns:1fr;
+    }
+}
+.menu-lista{
+    list-style:none;
+    padding:0;
+    margin-top:20px;
+}
+
+.menu-lista li{
+    display:grid;
+    grid-template-columns:120px 1fr auto;
+    align-items:center;
+    gap:25px;
+    padding:22px 0;
+    border-bottom:1px solid #f7d7d0;
+    position:relative;
+}
+
+.menu-lista li:last-child{
+    border-bottom:none;
+}
+
+.menu-lista li::before{
+    content:"";
+    width:105px;
+    height:105px;
+    border-radius:18px;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* BOLOS */
+
+.menu-lista li:nth-child(1)::before{
+    background-image:url("bolo de chocolate.jpg");
+}
+
+.menu-lista li:nth-child(2)::before{
+    background-image:url("cenoura com cobertura.jpg");
+}
+
+.menu-lista li:nth-child(3)::before{
+    background-image:url("red velvet.jpg");
+}
+
+.menu-lista li:nth-child(4)::before{
+    background-image:url("baunilha com morango.jpg");
+}
+
+/* CUPCAKES */
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(1)::before{
+    background-image:url("Cupcake de chocolate.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(2)::before{
+    background-image:url("cupcake baunilha.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(3)::before{
+    background-image:url("cupcake de morango.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(4)::before{
+    background-image:url("cupcake de cenoura.jpg");
+}
+
+.menu-lista strong{
+    display:block;
+    font-size:24px;
+    margin-bottom:8px;
+    color:#5a3525;
+}
+
+.menu-lista p{
+    color:#7a4631;
+    font-size:16px;
+    max-width:500px;
+}
+
+.preco{
+    font-size:22px;
+    font-weight:bold;
+    color:#e46f61;
+    white-space:nowrap;
+}
+.menu-lista{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.menu-lista li{
+    display:grid;
+    grid-template-columns:120px 1fr 190px;
+    grid-template-areas:
+        "foto nome preco"
+        "foto desc botao";
+    align-items:center;
+    gap:8px 25px;
+    padding:22px 0;
+    border-bottom:1px solid #f7d7d0;
+}
+
+.menu-lista li:last-child{
+    border-bottom:none;
+}
+
+.menu-lista li::before{
+    content:"";
+    grid-area:foto;
+    width:105px;
+    height:105px;
+    border-radius:18px;
+    background-size:cover;
+    background-position:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.12);
+}
+
+.menu-lista li strong{
+    grid-area:nome;
+    font-size:22px;
+    color:#5a3525;
+}
+
+.menu-lista li p{
+    grid-area:desc;
+    font-size:16px;
+    color:#7a4631;
+    margin:0;
+    max-width:520px;
+}
+
+.menu-lista li .preco{
+    grid-area:preco;
+    justify-self:end;
+    font-size:20px;
+    font-weight:bold;
+    color:#e46f61;
+}
+
+.menu-lista li button{
+    grid-area:botao;
+    justify-self:end;
+    width:170px;
+    padding:14px 25px;
+    background:#f28f82;
+    border:none;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-lista li button:hover{
+    background:#e46f61;
+    transform:translateY(-3px) scale(1.04);
+    box-shadow:0 8px 20px rgba(242,143,130,0.35);
+}
+
+.animar-botao{
+    animation:adicionado 0.5s ease;
+}
+
+@keyframes adicionado{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+    100%{transform:scale(1);}
+}
+
+.menu-categoria:first-of-type .menu-lista li:nth-child(1)::before{
+    background-image:url("bolo de chocolate.jpg");
+}
+
+.menu-categoria:first-of-type .menu-lista li:nth-child(2)::before{
+    background-image:url("cenoura com cobertura.jpg");
+}
+
+.menu-categoria:first-of-type .menu-lista li:nth-child(3)::before{
+    background-image:url("red velvet.jpg");
+}
+
+.menu-categoria:first-of-type .menu-lista li:nth-child(4)::before{
+    background-image:url("baunilha com morango.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(1)::before{
+    background-image:url("Cupcake de chocolate.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(2)::before{
+    background-image:url("cupcake baunilha.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(3)::before{
+    background-image:url("cupcake de morango.jpg");
+}
+
+.menu-categoria:nth-of-type(2) .menu-lista li:nth-child(4)::before{
+    background-image:url("cupcake de cenoura.jpg");
+}
